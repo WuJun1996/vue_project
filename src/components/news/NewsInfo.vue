@@ -10,10 +10,11 @@
         <hr>
         <div class="content" v-html="newsInfo.content"></div>
         <!-- 评论组件 -->
-        <comment-box></comment-box>
+        <comment-box :id="id"></comment-box>
     </div>
 </template>
 <script>
+import { Toast } from 'mint-ui'
 //导入 评论 子组件
 import CommentBox from '../subcomponents/CommentBox.vue'
 export default {
